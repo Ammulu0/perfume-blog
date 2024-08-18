@@ -1,0 +1,335 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f4f4f4;  /* Lighter background for better contrast */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;  /* Smooth scrolling for anchor links */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #00246B;  /* Deep blue background */
+    color: #CADCFC;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-bottom: 3px solid #FFDF7F;  /* Add a bottom border for accent */
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFDF7F;  /* Highlight the logo */
+    text-align: center;
+    flex: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add subtle text shadow */
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+header nav a {
+    color: #CADCFC;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+header nav a i {
+    margin-right: 0.5rem;
+}
+
+header nav a:hover {
+    color: #FFDF7F;
+    transform: translateY(-2px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Add text shadow on hover */
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background-color: #FFDF7F;  /* Lighter button for contrast */
+    color: #00246B;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-toggle i {
+    margin: 0;
+}
+
+/* Main Content and Sidebar Layout */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Article Styles */
+article {
+    flex: 1 1 70%;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 223, 127, 0.1) 0%, rgba(255, 223, 127, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+article h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #00246B;
+    text-transform: uppercase;  /* Uppercase title for emphasis */
+    letter-spacing: 1px;
+}
+
+article .meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    font-style: italic;  /* Italic meta information */
+}
+
+article p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+/* Sidebar Styles */
+aside {
+    flex: 1 1 30%;
+    background-color: #FFFFFF;
+    padding: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+     
+} 
+
+aside:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+aside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 223, 127, 0.1) 0%, rgba(255, 223, 127, 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+aside:hover::before {
+    opacity: 1;
+}
+
+aside h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #00246B;
+    border-bottom: 2px solid #FFDF7F;  /* Add a bottom border for emphasis */
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;  /* Uppercase section title */
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 0.75rem;
+}
+
+aside ul li a {
+    color: #00246B;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, text-decoration 0.3s;
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    color: #efeee9;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #00246B;
+    color: #CADCFC;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 2rem;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;  /* Light font for contrast */
+}
+
+footer .social-links {
+    margin-top: 1rem;
+}
+
+footer .social-links a {
+    color: #CADCFC;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #FFDF7F;
+    transform: translateY(-2px);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    display: none;
+    background-color: #00246B;
+    color: #CADCFC;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+#back-to-top i {
+    margin: 0;
+}
+
+/* Show back-to-top button when scrolling */
+body.scrolled #back-to-top {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        display: none;
+        width: 100%;
+    }
+
+    aside.visible {
+        display: block;
+    }
+}
+
+
